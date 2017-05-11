@@ -1,8 +1,6 @@
 package io.zipcoder.microlabs.arrays;
 
 
-import javax.swing.*;
-
 public class ArrayParty {
 
     public String printArray(String[] inputArray) {
@@ -57,7 +55,24 @@ public class ArrayParty {
         return sb.toString();
     }
 
-    public String isPalindrome(String[] inputArray) {return "";}
+    public String isPalindrome(String[] inputArray) {
+
+        int length = inputArray.length;
+        for (int index = 0; index < inputArray.length; index++) {
+            String start = inputArray[index];// get the element from the start
+            String end = inputArray[--length];// get corresponding element from end
+            // if start element is not the same as end element, the array is not
+            // palindrome
+            if (start != end) {
+                return "*** Output ***\nFalse";
+            }
+            // check if elements till the middle have been compared
+            if (length < index) {
+                break;
+            }
+        }
+        return "*** Output ***\nTrue";// if the control reaches here, means all the elements were same
+    }
 
     public String compress(String[] num) {return "";}
 
