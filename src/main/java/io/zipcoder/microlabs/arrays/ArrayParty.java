@@ -74,9 +74,30 @@ public class ArrayParty {
         return "*** Output ***\nTrue";// if the control reaches here, means all the elements were same
     }
 
-    public String compress(String[] num) {return "";}
+    public String compress(int[] num) {
 
-    public String pack(char[] letters) {return "";}
+        StringBuilder sb = new StringBuilder();
+        sb.append("compress(nums)\n*** Output ***\n");
+
+        sb.append(num[0] + "\n");
+        for (int i = 1; i < num.length; i ++){
+            if(num[i-1] != num[i]) sb.append(num[i] + "\n");
+        }
+        return sb.toString().trim();
+    }
+
+    public String pack(char[] letters) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("pack(nums)\n*** Output ***\n");
+
+        sb.append(letters[0]);
+        for (int i = 1; i < letters.length; i++){
+            if(letters[i-1] == letters[i]) sb.append(letters[i]);
+            else sb.append(", " + letters[i]);
+        }
+        return sb.toString();
+    }
+
 
 
 }

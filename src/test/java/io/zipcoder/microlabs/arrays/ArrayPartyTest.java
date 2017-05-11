@@ -90,31 +90,32 @@ public class ArrayPartyTest {
     @Test
     public void compressTest(){
         //:given
+        ArrayParty arrayParty = new ArrayParty();
+        int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
+        String expected = "compress(nums)\n*** Output ***\n" +
+                "1\n3\n2\n1\n4";
 
         //:when
+        String actual = arrayParty.compress(nums);
 
         //:then
-
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void packTest(){
         //:given
+        ArrayParty arrayParty = new ArrayParty();
+        char [] letters = {'a', 'a', 'a', 'a', 'b', 'c',
+                'c', 'a', 'a', 'd',
+                'e', 'e', 'e', 'e'};
+        String expected = "pack(nums)\n*** Output ***\naaaa, b, cc, aa, d, eeee";
 
         //:when
-
+        String actual = arrayParty.pack(letters);
         //:then
+        Assert.assertEquals(expected, actual);
 
     }
-    //TODO Define the method lastButOneTest
-
-    //TODO Define the method reverseTest
-
-    //TODO Define the method isPalindromeTest
-
-    //TODO Define the method compressTest
-
-    //TODO Define the method packTest
-
 
 }
