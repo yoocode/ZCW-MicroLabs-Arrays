@@ -1,6 +1,8 @@
 package io.zipcoder.microlabs.arrays;
 
 
+import javax.swing.*;
+
 public class ArrayParty {
 
     public String printArray(String[] inputArray) {
@@ -20,22 +22,46 @@ public class ArrayParty {
     }
 
 
-
-
     public String lastElement(String[] inputArray){
-        return "";
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("*** Output ***\n");
+        sb.append(inputArray[inputArray.length-1]);
+
+        return sb.toString();
     }
 
-    //TODO Define the method lastButOne
+    public String lastButOne(String[] inputArray) {
+        StringBuilder sb = new StringBuilder();
 
-    //TODO Define the method reverse
+        sb.append("*** Output ***\n");
+        sb.append(inputArray[inputArray.length-2]);
 
-    //TODO Define the method isPalindrome
+        return sb.toString();
+    }
 
-    //TODO Define the method compress
+    public String reverse(String[] inputArray) {
 
-    //TODO Define the method pack
+        StringBuilder sb = new StringBuilder();
+        sb.append("*** Output ***\n");
 
+        for (int i = inputArray.length-1; i >= 0; i--){
+//            if (i != 0) {
+//                sb.append("\n");
+//            }
+            String text = inputArray[i];
+            if(i!= 0) sb.append(text + "\n");
+        }
+        sb.append(inputArray[0]);
+        return sb.toString();
+    }
+
+    public String isPalindrome(String[] inputArray) {return "";}
+
+    public String compress(String[] num) {return "";}
+
+    public String pack(char[] letters) {return "";}
 
 
 }
