@@ -6,24 +6,18 @@ public class ArrayParty {
     public String printArray(String[] inputArray) {
 
         StringBuilder sb = new StringBuilder();
-
         sb.append("*** Output ***\n");
 
         for (int i = 0; i < inputArray.length; i++) {
-            if (i > 0){
-                sb.append("\n");
-            }
-            String item = inputArray[i];
-            sb.append(item);
+            sb.append(inputArray[i] + "\n");
         }
-        return sb.toString();
+        return sb.toString().trim();
     }
 
 
     public String lastElement(String[] inputArray){
 
         StringBuilder sb = new StringBuilder();
-
         sb.append("*** Output ***\n");
         sb.append(inputArray[inputArray.length-1]);
 
@@ -31,8 +25,8 @@ public class ArrayParty {
     }
 
     public String lastButOne(String[] inputArray) {
-        StringBuilder sb = new StringBuilder();
 
+        StringBuilder sb = new StringBuilder();
         sb.append("*** Output ***\n");
         sb.append(inputArray[inputArray.length-2]);
 
@@ -45,14 +39,10 @@ public class ArrayParty {
         sb.append("*** Output ***\n");
 
         for (int i = inputArray.length-1; i >= 0; i--){
-//            if (i != 0) {
-//                sb.append("\n");
-//            }
             String text = inputArray[i];
-            if(i!= 0) sb.append(text + "\n");
+            sb.append(text + "\n");
         }
-        sb.append(inputArray[0]);
-        return sb.toString();
+        return sb.toString().trim();
     }
 
     public String isPalindrome(String[] inputArray) {
