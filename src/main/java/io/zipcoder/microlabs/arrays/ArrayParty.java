@@ -48,7 +48,7 @@ public class ArrayParty {
     public String isPalindrome(String[] inputArray) {
 
         int length = inputArray.length;
-        for (int index = 0; index < inputArray.length; index++) {
+        for (int index = 0; index < length; index++) {
             String start = inputArray[index];// get the element from the start
             String end = inputArray[--length];// get corresponding element from end
             // if start element is not the same as end element, the array is not

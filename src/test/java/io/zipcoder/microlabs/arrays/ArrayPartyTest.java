@@ -37,7 +37,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.lastElement(breakfast);
 
         //: Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals("Expected last element is equal to actual",expected, actual);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ArrayPartyTest {
         //:when
         String actual = arrayParty.lastButOne(breakfast);
         //:then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals("The second to the last element is \"Tomatoes\"", expected, actual);
     }
 
     @Test
@@ -63,7 +63,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.reverse(breakfast);
 
         //:then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals("make a reverse array", expected, actual);
 
     }
 
@@ -83,8 +83,8 @@ public class ArrayPartyTest {
         String actual1 = arrayParty.isPalindrome(breakfast);
 
         //:then
-        Assert.assertEquals(expected, actual);
-        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals("Is it palindromic? Yes", expected, actual);
+        Assert.assertEquals("Is it palindromic? No", expected1, actual1);
     }
 
     @Test
@@ -99,7 +99,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.compress(nums);
 
         //:then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals("remove redundant elements", expected, actual);
     }
 
     @Test
@@ -114,7 +114,7 @@ public class ArrayPartyTest {
         //:when
         String actual = arrayParty.pack(letters);
         //:then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals("Remove spaces", expected, actual);
 
     }
 
